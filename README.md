@@ -11,5 +11,5 @@ We aim to fine-tune stereo networks without compromising robustness to unseen do
 
 
 ## TODO
-- [ ] training code
-- [ ] checkpoint
+- [ ] Release Training Code.
+- [ ] Release Checkpoint.
