@@ -21,6 +21,7 @@ We aim to fine-tune stereo networks without compromising robustness to unseen do
 - [ ] Release Checkpoint.
 
 ## Demos
+Pretrained models can be downloaded from [google drive](https://drive.google.com/drive/folders/1EtBp8biVF21rYCc_gJHCW2sUkowWMPcR?usp=sharing)
 
 ## Environment
 
