@@ -1,0 +1,18 @@
+{
+    "model": "PCVNet",
+    "loss_func": "sequence_loss_pcvnet",
+    "backbone_type": "default",
+    "corr_implementation": "reg",
+    "shared_backbone": false,
+    "corr_levels": 3,
+    "corr_radius": 4,
+    "n_downsample": 2,
+    "context_norm": "batch",
+    "slow_fast_gru": true,
+    "n_gru_layers": 3,
+    "hidden_dims": [128, 128, 128, 128],
+    "gauss_num": 4,
+    "sample_num": 9,
+    "init_sigma": 32,
+    "init_mu": [0, 64, 128, 192]
+}

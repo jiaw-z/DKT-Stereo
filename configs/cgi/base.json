@@ -1,0 +1,5 @@
+{
+    "model": "CGI_Stereo",
+    "loss_func": "loss_cgi",
+    "maxdisp": 192
+}

@@ -1,0 +1,14 @@
+{
+    "model": "RAFTStereo",
+    "loss_func": "sequence_loss_raft",
+    "backbone_type": "default",
+    "corr_implementation": "reg",
+    "shared_backbone": false,
+    "corr_levels": 4,
+    "corr_radius": 4,
+    "n_downsample": 2,
+    "context_norm": "batch",
+    "slow_fast_gru": false,
+    "n_gru_layers": 3,
+    "hidden_dims": [128, 128, 128]
+}

@@ -1,0 +1,6 @@
+{
+    "model": "GWCNet",
+    "loss_func": "loss_gwcnet",
+    "use_concat_volume": true,
+    "maxdisp": 192
+}
