@@ -29,8 +29,61 @@ Pretrained models can be downloaded from [google drive](https://drive.google.com
 * Python 3.8
 * pytorch 1.12
 
+  ### Create a virtual environment and activate it.
+
+```
+conda create -n DKT_Stereo python=3.8
+conda activate DKT_Stereo
+```
+### Dependencies
+
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c nvidia
+pip install opencv-python
+pip install scikit-image
+pip install tensorboard
+pip install matplotlib 
+pip install tqdm
+pip install timm==0.5.4
+```
+
 ## Required Data
 
-## Evaluation
+To evaluate/train DKT-Stereo, you will need to download the required datasets. 
+* [KITTI](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo)
+* [Booster](https://cvlab-unibo.github.io/booster-web/)
+* [Middlebury](https://vision.middlebury.edu/stereo/submit3/)
+* [ETH3D](https://www.eth3d.net/datasets#low-res-two-view-test-data)
 
+By default `stereo_datasets.py` will search for the datasets in these locations. 
+
+```
+├── /data
+    ├── KITTI
+        ├── KITTI_2012
+            ├── training
+            ├── testing
+        ├── KITTI_2015
+            ├── training
+            ├── testing
+    ├── Booster_dataset
+        ├── full
+        ├── half
+        ├── quarter
+            ├── train
+    ├── Middlebury
+        ├── MiddEval3
+            ├── trainingF
+            ├── trainingH
+            ├── trainingQ
+    ├── ETH3D
+        ├── two_view_training
+        ├── two_view_training_gt
+
+```
+
+## Evaluation
+```Shell
+python tools/evaluate_stereo.py --config configs/raft_stereo/base.json --restore_ckpt ckpt/dkt-raft/booster_ft.pth --logdir output/eval/dkt-raft
+```
 ## Training
