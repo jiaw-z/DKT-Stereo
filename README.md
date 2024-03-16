@@ -24,6 +24,10 @@ We aim to fine-tune stereo networks without compromising robustness to unseen do
 
 ## Environment
 
+* NVIDIA RTX 3090
+* Python 3.8
+* pytorch 1.12
+
 ## Required Data
 
 ## Evaluation
