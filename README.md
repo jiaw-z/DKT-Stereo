@@ -87,3 +87,22 @@ By default `stereo_datasets.py` will search for the datasets in these locations.
 python tools/evaluate_stereo.py --config configs/raft_stereo/base.json --restore_ckpt ckpt/dkt-raft/booster_ft.pth --logdir output/eval/dkt-raft
 ```
 ## Training
+
+
+## Citation
+
+If you find our work useful in your research, please consider citing our paper:
+
+```bibtex
+@article{zhang2024robust,
+  title={Robust Synthetic-to-Real Transfer for Stereo Matching},
+  author={Zhang, Jiawei and Li, Jiahe and Huang, Lei and Yu, Xiaohan and Gu, Lin and Zheng, Jin and Bai, Xiao},
+  journal={arXiv preprint arXiv:2403.07705},
+  year={2024}
+}
+```
+
+
+# Acknowledgements
+
+This project is based on [IGEV](https://github.com/gangweiX/IGEV) and [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo). Thanks for these great projects!
