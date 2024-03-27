@@ -88,6 +88,9 @@ By default `stereo_datasets.py` will search for the datasets in these locations.
 ```Shell
 python tools/evaluate_stereo.py --config configs/raft_stereo/base.json --restore_ckpt ckpt/dkt-raft/booster_ft.pth --logdir output/eval/dkt-raft
 ```
+```Shell
+python tools/evaluate_stereo.py --config configs/igev_stereo/base.json --restore_ckpt ckpt/dkt-igev/kitti_ft.pth --logdir output/eval/dkt-igev
+```
 ## Training
 Booster fine-tuning
 ```Shell
