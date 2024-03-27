@@ -16,7 +16,7 @@ import os.path as osp
 import cv2
 
 from core.utils import frame_utils
-from core.utils.augmentor import FlowAugmentor, SparseFlowAugmentor, TripletFlowAugmentor, CropAugmentor, FlowAugmentor_RTClean, PTrans
+from core.utils.augmentor import FlowAugmentor, SparseFlowAugmentor, TripletFlowAugmentor, CropAugmentor, FlowAugmentor_RTClean, PTrans, SparseFlowAugmentor_RTClean
 
 def read_all_lines(filename):
     with open(filename) as f:
@@ -32,7 +32,8 @@ class StereoDataset(data.Dataset):
         self.img_pad = aug_params.pop("img_pad", None) if aug_params is not None else None
         if aug_params is not None and "crop_size" in aug_params:
             if sparse:
-                self.augmentor = SparseFlowAugmentor(**aug_params)
+                # self.augmentor = SparseFlowAugmentor(**aug_params)
+                self.augmentor = SparseFlowAugmentor_RTClean(**aug_params)
             else:
                 # self.augmentor = FlowAugmentor(**aug_params)
                 # logging.info(f'use FlowAugmentor for dense dataset')
@@ -103,7 +104,8 @@ class StereoDataset(data.Dataset):
 
         if self.augmentor is not None:
             if self.sparse:
-                img1, img2, flow, valid = self.augmentor(img1, img2, flow, valid)
+                # img1, img2, flow, valid = self.augmentor(img1, img2, flow, valid)
+                img1_clean, img2_clean, img1, img2, flow, valid = self.augmentor(img1, img2, flow, valid)
             else:
                 # img1, img2, flow = self.augmentor(img1, img2, flow)
                 img1_clean, img2_clean, img1, img2, flow = self.augmentor(img1, img2, flow)
@@ -510,7 +512,8 @@ def fetch_dataloader(args):
             new_dataset = ETH3D(aug_params)
             logging.info(f"Adding {len(new_dataset)} samples from ETH3D")
         elif dataset_name == 'booster':
-            new_dataset = Booster(aug_params)
+            # new_dataset = Booster(aug_params, resolution='H')
+            new_dataset = Booster(aug_params, resolution='Q')
             logging.info(f"Adding {len(new_dataset)} samples from Booster")
         elif dataset_name == 'sintel_stereo':
             new_dataset = SintelStereo(aug_params)*140
