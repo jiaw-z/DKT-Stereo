@@ -1,0 +1,12 @@
+{
+    "model": "IGEVStereo",
+    "loss_func": "sequence_loss_raft",
+    "corr_levels": 2,
+    "corr_radius": 4,
+    "n_downsample": 2,
+    "context_norm": "batch",
+    "slow_fast_gru": false,
+    "n_gru_layers": 3,
+    "hidden_dims": [128, 128, 128],
+    "max_disp": 192
+}
