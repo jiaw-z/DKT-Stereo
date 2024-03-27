@@ -21,7 +21,9 @@ We aim to fine-tune stereo networks without compromising robustness to unseen do
 - [ ] Release Checkpoint.
 
 ## Demos
-Pretrained models can be downloaded from [google drive](https://drive.google.com/drive/folders/1EtBp8biVF21rYCc_gJHCW2sUkowWMPcR?usp=sharing)
+Fine-tuned checkpoints of DKT-Stereo can be downloaded from [google drive](https://drive.google.com/drive/folders/1EtBp8biVF21rYCc_gJHCW2sUkowWMPcR?usp=sharing)
+
+The sceneflow pre-trained checkpoints can be obtained from [IGEV](https://github.com/gangweiX/IGEV) and [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo).
 
 ## Environment
 
@@ -87,6 +89,10 @@ By default `stereo_datasets.py` will search for the datasets in these locations.
 python tools/evaluate_stereo.py --config configs/raft_stereo/base.json --restore_ckpt ckpt/dkt-raft/booster_ft.pth --logdir output/eval/dkt-raft
 ```
 ## Training
+Booster fine-tuning
+```Shell
+bash run_scripts/raft-stereo/ft_booster.sh gpus(0,1) output_dir(/output)
+```
 
 
 ## Citation
