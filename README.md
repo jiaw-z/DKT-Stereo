@@ -94,12 +94,12 @@ python tools/evaluate_stereo.py --config configs/igev_stereo/base.json --restore
 ## Training
 Booster fine-tuning. This current fine-tuning code on booster is different from the implementation for online submission checkpoints, which use the cascade training strategy as [PCVNet](https://github.com/jiaxiZeng/Parameterized-Cost-Volume-for-Stereo-Matching).
 ```Shell
-bash run_scripts/raft-stereo/ft_booster.sh gpus(0,1) output_dir(/output)
+bash run_scripts/raft-stereo/ft_booster.sh gpus(0,1) output_dir(/output/raftstereo/booster_ft)
 ```
 
 KITTI fine-tuning.
 ```Shell
-bash run_scripts/igev/ft_kitti.sh gpus(0,1,2,3) output_dir(/output)
+bash run_scripts/igev/ft_kitti.sh gpus(0,1,2,3) output_dir(/output/igevstereo/kitti_ft)
 ```
 
 
