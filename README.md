@@ -97,6 +97,11 @@ Booster fine-tuning. This current fine-tuning code on booster is different from 
 bash run_scripts/raft-stereo/ft_booster.sh gpus(0,1) output_dir(/output)
 ```
 
+KITTI fine-tuning.
+```Shell
+bash run_scripts/igev/ft_kitti.sh gpus(0,1,2,3) output_dir(/output)
+```
+
 
 ## Citation
 
