@@ -17,8 +17,8 @@ We aim to fine-tune stereo networks without compromising robustness to unseen do
 
 
 ## TODO
-- [ ] Release Training Code.
-- [ ] Release Checkpoint.
+- [x] Release Training Code.
+- [x] Release Checkpoint.
 
 ## Demos
 Fine-tuned checkpoints of DKT-Stereo can be downloaded from [google drive](https://drive.google.com/drive/folders/1EtBp8biVF21rYCc_gJHCW2sUkowWMPcR?usp=sharing)
