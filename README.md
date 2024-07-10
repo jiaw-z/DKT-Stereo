@@ -108,10 +108,11 @@ bash run_scripts/igev/ft_kitti.sh gpus(0,1,2,3) output_dir(/output/igevstereo/ki
 If you find our work useful in your research, please consider citing our paper:
 
 ```bibtex
-@article{zhang2024robust,
+@inproceedings{zhang2024robust,
   title={Robust Synthetic-to-Real Transfer for Stereo Matching},
   author={Zhang, Jiawei and Li, Jiahe and Huang, Lei and Yu, Xiaohan and Gu, Lin and Zheng, Jin and Bai, Xiao},
-  journal={arXiv preprint arXiv:2403.07705},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={20247--20257},
   year={2024}
 }
 ```
